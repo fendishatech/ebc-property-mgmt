@@ -1,4 +1,4 @@
-const BlogPost = require("../models/blog.model");
+const BlogPost = require("../models/user.model");
 
 // DEV
 const migrate_tables = async () => {

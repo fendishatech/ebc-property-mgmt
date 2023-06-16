@@ -3,7 +3,7 @@ const router = require("express").Router();
 
 // GET /blog-posts
 router.get("/", async (req, res) => {
-  res.render("home.index");
+  res.render("home/index");
 });
 
 module.exports = router;

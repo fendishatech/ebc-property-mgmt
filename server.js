@@ -5,20 +5,25 @@ const methodOverride = require("method-override");
 const expressLayouts = require("express-ejs-layouts");
 const homeRouter = require("./src/routes/home.routes");
 
+// define app
+const app = express();
+
 // Middleware
-this.app.set("view engine", "ejs");
-this.app.set("views", path.join(__dirname, "./src/views"));
-this.app.set("layout", "layouts/layout");
-this.app.use(expressLayouts);
-this.app.use(express.static("public")); // Serve static files first
-this.app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
-this.app.use(express.json()); // Parse JSON request bodies
-this.app.use(methodOverride("_method"));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "./src/views"));
+app.set("layout", "layouts/layout");
+app.use(expressLayouts);
+app.use(express.static("public")); // Serve static files first
+app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
+app.use(express.json()); // Parse JSON request bodies
+app.use(methodOverride("_method"));
 
 // Routes
-this.app.use("/", homeRouter);
+app.use("/", homeRouter);
 
 // // Start Server
-this.app.listen(3000, () => {
+app.listen(3000, () => {
   console.log(`Server is up ... on http://localhost:${3000}`);
 });
+
+console.log("Hello");
