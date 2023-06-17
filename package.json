@@ -4,10 +4,7 @@
   "description": "A basic express full stack app template with ejs engine and tailwind css",
   "main": "server.js",
   "scripts": {
-    "devCon": "concurrently \" npm run watch:tailwind\" \" npm run dev\" \" npm run browser:sync ",
     "dev": "nodemon server.js",
-    "watch:tailwind": "postcss public/css/main.css -o public/css/main.min.css --watch",
-    "browser:sync": "browser-sync start --proxy \"localhost:3333\" --files \"public/**/*.*\" \"./src/views/**/*.*\" --watch",
     "start": "node server.js"
   },
   "keywords": [
