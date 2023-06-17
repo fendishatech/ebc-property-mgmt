@@ -1,7 +1,15 @@
-<h1 class="text-center pt-5 text-blue-500 font-bold text-4xl">
-  Home Page is set up and rendrered!
-</h1>
-<!-- Store table -->
-<%- include('./partials/store-table.ejs') %>
-<!-- Calendar -->
-<%- include('./partials/calendar.ejs') %>
+<!-- container -->
+<div class="px-6 pt-4">
+  <!-- Top Section -->
+  <section class="flex">
+    <div class="flex-1">
+      <h1 class="text-start py-2 text-red-500 font-bold text-4xl">Store</h1>
+      <!-- Store table -->
+      <%- include('./partials/store-table.ejs') %>
+    </div>
+    <div class="flex-1">
+      <!-- Calendar -->
+      <%- include('./partials/calendar.ejs') %>
+    </div>
+  </section>
+</div>
