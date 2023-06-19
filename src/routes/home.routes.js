@@ -1,9 +1,18 @@
 const router = require("express").Router();
-// const BlogPost = require("../models/blog.model");
+const Item = require("../models/item.model");
+const Store = require("../models/store.model");
+const User = require("../models/user.model");
 
-// GET /blog-posts
+// GET
 router.get("/", async (req, res) => {
-  res.render("home/index");
+  const storeItems = await Store.findAll();
+  const items = await Item.findAll();
+  const users = await User.findAll();
+  res.render("home/index", {
+    storeItems,
+    items,
+    users,
+  });
 });
 
 module.exports = router;

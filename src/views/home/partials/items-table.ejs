@@ -5,29 +5,23 @@
         <thead class="bg-gray-50">
           <tr>
             <th class="px-6 py-2 text-xs text-gray-500">ID</th>
-            <th class="px-6 py-2 text-xs text-gray-500">Store Name</th>
-            <th class="px-6 py-2 text-xs text-gray-500">Quantity</th>
-            <th class="px-6 py-2 text-xs text-gray-500">Location</th>
+            <th class="px-6 py-2 text-xs text-gray-500">Item Name</th>
+            <th class="px-6 py-2 text-xs text-gray-500">Partnumber</th>
             <th class="px-6 py-2 text-xs text-gray-500">Edit</th>
             <th class="px-6 py-2 text-xs text-gray-500">Delete</th>
           </tr>
         </thead>
         <tbody class="bg-white divide-y divide-gray-300">
-          <% for (let i = 0; i < storeItems.length; i++) { %>
+          <% for (let i = 0; i < items.length; i++) { %>
           <tr class="whitespace-nowrap">
             <td class="px-6 py-4 text-sm text-gray-500"><%= i + 1 %></td>
             <td class="px-6 py-4">
-              <div class="text-sm text-gray-900">
-                <%= storeItems[i].store_name %>
-              </div>
+              <div class="text-sm text-gray-900"><%= items[i].item_name %></div>
             </td>
             <td class="px-6 py-4">
               <div class="text-sm text-gray-500">
-                <%= storeItems[i].quantity %>
+                <%= items[i].partnumber %>
               </div>
-            </td>
-            <td class="px-6 py-4 text-sm text-gray-500">
-              <%= storeItems[i].location %>
             </td>
             <td class="px-6 py-4">
               <a
