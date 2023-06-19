@@ -1,0 +1,12 @@
+@baseUrl = http://localhost:3000
+
+### CREATE
+POST {{baseUrl}}/store
+Content-Type: application/json
+
+{
+    "store_name": "ict",
+    "quantity": 8,
+    "location": "shelf-7,box-1,row-1,cell-1",
+    "itemId": 1
+  }

@@ -3,6 +3,7 @@ const Employee = require("../models/employee.model");
 const Department = require("../models/department.model");
 const Category = require("../models/category.model");
 const Item = require("../models/item.model");
+const Store = require("../models/store.model");
 
 // DEV
 const migrate_tables = async () => {
@@ -12,6 +13,7 @@ const migrate_tables = async () => {
     await Employee.sync();
     await Category.sync();
     await Item.sync();
+    await Store.sync();
 
     console.log("Table Migrated Successfully");
   } catch (error) {
