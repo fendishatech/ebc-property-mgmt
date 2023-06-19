@@ -41,8 +41,8 @@ app.use("/store", storeRouter);
 migrate_tables();
 
 // Start Server
-app.listen(3000, () => {
-  console.log(`Server is up ... on http://localhost:${3000}`);
+app.listen(3333, () => {
+  console.log(`Server is up ... on http://localhost:${3333}`);
 });
 
 console.log("Hello");
