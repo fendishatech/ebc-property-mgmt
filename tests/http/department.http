@@ -1,0 +1,17 @@
+@baseUrl = http://localhost:3000
+
+### CREATE
+POST {{baseUrl}}/departments
+Content-Type: application/json
+
+{
+  "name": "ICT"
+}
+
+# {
+#   "name": "Transmitter"
+# }
+
+# {
+#   "name": "Technical studio"
+# }

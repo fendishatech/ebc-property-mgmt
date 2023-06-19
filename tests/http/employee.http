@@ -1,0 +1,13 @@
+@baseUrl = http://localhost:3000
+
+### CREATE
+POST {{baseUrl}}/employees
+Content-Type: application/json
+
+{
+    "first_name": "John",
+    "last_name": "Doe",
+    "phone_no": "1234567890",
+    "employee_position": "Software Engineer",
+    "departmentId": 1
+  }
