@@ -8,6 +8,8 @@ const homeRouter = require("./src/routes/home.routes");
 const departmentRouter = require("./src/routes/department.routes");
 const employeeRouter = require("./src/routes/employee.routes");
 const userRouter = require("./src/routes/user.routes");
+const categoryRouter = require("./src/routes/category.routes");
+const itemRouter = require("./src/routes/item.routes");
 const migrate_tables = require("./src/helpers/migrate_models");
 
 // define app
@@ -28,6 +30,8 @@ app.use("/", homeRouter);
 app.use("/departments", departmentRouter);
 app.use("/employees", employeeRouter);
 app.use("/users", userRouter);
+app.use("/categories", categoryRouter);
+app.use("/items", itemRouter);
 
 // DEV
 // MIGRATE MODELS

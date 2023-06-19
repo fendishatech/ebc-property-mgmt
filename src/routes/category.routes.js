@@ -1,11 +1,11 @@
-const Department = require("../models/department.model");
+const Category = require("../models/category.model");
 
 const router = require("express").Router();
 
-// GET
+// POST : CREATE
 router.post("/", async (req, res) => {
   try {
-    const dep = await Department.create({
+    const dep = await Category.create({
       name: req.body.name,
     });
     if (dep) {

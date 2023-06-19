@@ -1,0 +1,11 @@
+@baseUrl = http://localhost:3000
+
+### CREATE
+POST {{baseUrl}}/items
+Content-Type: application/json
+
+{
+    "item_name": "ALIGNMENT TAPE RBS-35PPAL",
+    "partnumber": "8-960-020-62",
+    "categoryId": 3
+  }
