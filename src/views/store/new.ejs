@@ -1,0 +1,14 @@
+<div class="px-4">
+  <h1 class="text-2xl text-red-700 font-bold">New Blog Post</h1>
+  <form class="mb-4" action="/store" method="POST">
+    <%- include('./partials/_store_form_fields.ejs') %>
+    <button class="my-4 px-6 py-2 bg-red-600 text-white rounded" type="submit">
+      Add New Item To store
+    </button>
+  </form>
+  <div class="my-4">
+    <a class="px-6 py-2 bg-red-900 text-white rounded" href="/store"
+      >Back to Store</a
+    >
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<h1>Edit Blog Post</h1>
+<form action="/<%= blog.id %>?_method=PUT" method="POST">
+  <%- include('./partials/_blog_form_fields.ejs') %>
+
+  <button type="submit">Update Blog Post</button>
+</form>
+<a href="/">Back to All Blogs</a>
