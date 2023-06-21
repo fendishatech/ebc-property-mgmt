@@ -13,11 +13,16 @@ router.get("/new", async (req, res) => {
 // POST : CREATE
 router.post("/", async (req, res) => {
   try {
-    const { store_name, quantity, location, itemId } = req.body;
+    const storeItem = {
+      itemId: req.body.itemId,
+      store_name: req.body.store_name,
+      quantity: req.body.quantity,
+      location: `shelf-${req.body.shelf}, box-${req.body.box}, row-${req.body.row}, cell-${req.body.cell}`,
+    };
 
-    const item = await Store.create({ store_name, quantity, location, itemId });
+    const item = await Store.create(storeItem);
 
-    res.status(201).json(item);
+    res.redirect("/store");
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Internal server error" });
@@ -99,16 +104,15 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// DELETE /blog-posts/:id
-router.delete("/:id", async (req, res) => {
-  console.log("Id :", req.params.id);
+// DELETE
+router.delete("/store/:id", async (req, res) => {
   try {
-    const blog = await BlogPost.findByPk(req.params.id);
-    console.log("Blog :", blog);
-    if (!blog) {
-      res.status(404).send("Blog Post Not Found");
+    const item = await Store.findByPk(req.params.id);
+
+    if (!item) {
+      res.status(404).send("Item Not Found");
     } else {
-      await blog.destroy();
+      await item.destroy();
       res.redirect("/");
     }
   } catch (error) {

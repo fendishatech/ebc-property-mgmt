@@ -5,6 +5,7 @@ const methodOverride = require("method-override");
 const expressLayouts = require("express-ejs-layouts");
 // Routes
 const homeRouter = require("./src/routes/home.routes");
+const authRouter = require("./src/routes/auth.routes");
 const departmentRouter = require("./src/routes/department.routes");
 const employeeRouter = require("./src/routes/employee.routes");
 const userRouter = require("./src/routes/user.routes");
@@ -29,6 +30,7 @@ app.use(methodOverride("_method"));
 
 // Routes
 app.use("/", homeRouter);
+app.use("/", authRouter);
 app.use("/departments", departmentRouter);
 app.use("/employees", employeeRouter);
 app.use("/users", userRouter);

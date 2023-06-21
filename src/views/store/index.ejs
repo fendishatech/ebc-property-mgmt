@@ -46,16 +46,13 @@
             <td class="px-6 py-4">
               <a
                 href="#"
-                class="px-4 py-1 text-sm text-indigo-600 bg-indigo-200 rounded-full"
+                class="text-1xl px-4 py-2 text-sm text-white bg-indigo-400 rounded"
                 >Edit</a
               >
             </td>
             <td class="px-6 py-4">
-              <a
-                href="#"
-                class="px-4 py-1 text-sm text-red-400 bg-red-200 rounded-full"
-                >Delete</a
-              >
+              <%- include ('./partials/_delete_form.ejs', { url :
+              `/store/${storeItems[i].id}` }) %>
             </td>
           </tr>
           <% } %>
